@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<div th:replace="themes/default/header::header(title='友情链接',keywords=null)"></div>
+<body>
+<div class="widget-wrap">
+    <h3 class="widget-title"></h3>
+    <div class="widget tagcloud" >
+        <a th:href="${'tag/'+tag.name}"  th:attr="style='font-size:'+${tag.count}+'px'"   th:each="tag: ${cloudTags}"  th:text="${tag.name}"></a>
+
+    </div>
+</div>
+
+</body>
+<div th:replace="themes/default/footer::footer"></div>
+</html>
