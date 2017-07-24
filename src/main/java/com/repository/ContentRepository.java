@@ -15,6 +15,6 @@ import java.util.List;
 public interface ContentRepository extends JpaRepository<Content,Integer> {
 
     @Query("select c from Content c order by c.created desc")
-    List<Content> contents(Pageable pageable);
+    List<Content> GetContents(Pageable pageable);
 }
 
